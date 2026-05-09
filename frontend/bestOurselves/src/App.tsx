@@ -100,9 +100,11 @@ function LandingPage() {
   );
 }
 
+const basename = import.meta.env.PROD ? '/endlessNovel' : '/';
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
