@@ -48,3 +48,14 @@ Thumbs.db
 # Local data
 data/local/
 outputs/local/
+
+# Audio files
+*.mgg
+*.mp3
+*.wav
+*.flac
+*.m4a
+
+# Frontend build
+frontend/bestOurselves/dist/
+frontend/bestOurselves/node_modules/
