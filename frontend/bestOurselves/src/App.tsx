@@ -8,6 +8,7 @@ import CatalogPage from "./pages/CatalogPage";
 import FanWorksPage from "./pages/FanWorksPage";
 import CreateWorkPage from "./pages/CreateWorkPage";
 import ScrollToTop from "./components/ScrollToTop";
+import MusicPlayer from "./components/MusicPlayer";
 import { motion } from "motion/react";
 import { Trees as Tree, Heart } from "lucide-react";
 
@@ -106,6 +107,7 @@ export default function App() {
   return (
     <BrowserRouter basename={basename}>
       <ScrollToTop />
+      <MusicPlayer />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/read/:id" element={<ReadingPage />} />

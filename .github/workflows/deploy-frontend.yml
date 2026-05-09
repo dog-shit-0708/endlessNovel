@@ -31,12 +31,17 @@ jobs:
       - name: Install dependencies
         run: |
           cd frontend/bestOurselves
-          npm ci
+          npm install
 
       - name: Build
         run: |
           cd frontend/bestOurselves
           NODE_ENV=production npm run build
+
+      - name: Debug - List dist contents
+        run: |
+          ls -la frontend/bestOurselves/dist/
+          cat frontend/bestOurselves/dist/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
