@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif SC", serif;
+  --font-cursive: "Ma Shan Zheng", cursive;
+
+  --color-summer-green-50: #f0fdf4;
+  --color-summer-green-100: #dcfce7;
+  --color-summer-green-200: #bbf7d0;
+  --color-summer-green-600: #16a34a;
+  --color-summer-green-800: #166534;
+  --color-summer-green-900: #14532d;
+  --color-summer-green-950: #052e16;
+}
+
+@layer base {
+  .reading-content p {
+    font-size: var(--reading-font-size, 1.1rem);
+    line-height: var(--reading-line-height, 2.2);
+    @apply tracking-wider mb-8 opacity-90 text-justify;
+    text-underline-offset: 4px;
+    font-feature-settings: "palt";
+  }
+  
+  .reading-content h3 {
+    @apply text-xl font-bold mt-12 mb-6 text-summer-green-950 tracking-[0.2em];
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #E5E7EB;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #D1D5DB;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-summer-green-50 text-summer-green-900 selection:bg-summer-green-200;
+  }
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-md border border-white/50;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-summer-green-800 to-summer-green-600;
+}
